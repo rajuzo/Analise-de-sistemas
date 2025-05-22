@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro e Pesquisa de Livros</title>
+</head>
+<body>
+    <h1>Cadastro de Livro</h1>
+    <form action="http://localhost:8080/livros" method="post">
+        <label for="titulo">Título:</label><br>
+        <input type="text" id="titulo" name="titulo" required><br><br>
+
+        <label for="autor">Autor:</label><br>
+        <input type="text" id="autor" name="autor" required><br><br>
+
+        <label for="anoPublicacao">Ano de Publicação:</label><br>
+        <input type="number" id="anoPublicacao" name="anoPublicacao" required><br><br>
+
+        <label for="isbn">ISBN:</label><br>
+        <input type="text" id="isbn" name="isbn" required><br><br>
+
+        <button type="submit">Cadastrar Livro</button>
+    </form>
+
+    <hr>
+
+    <h2>Pesquisar Livro por Título</h2>
+    <form action="http://localhost:8080/livros" method="get">
+        <label for="tituloPesquisa">Título:</label><br>
+        <input type="text" id="tituloPesquisa" name="titulo" required><br><br>
+        <button type="submit">Buscar por Título</button>
+    </form>
+
+    <hr>
+
+    <h2>Pesquisar Livro por Autor</h2>
+    <form action="http://localhost:8080/livros" method="get">
+        <label for="autorPesquisa">Autor:</label><br>
+        <input type="text" id="autorPesquisa" name="autor" required><br><br>
+        <button type="submit">Buscar por Autor</button>
+    </form>
+
+    <hr>
+
+    <h2>Pesquisar Livro por ISBN</h2>
+    <form action="http://localhost:8080/livros/" method="get" onsubmit="this.action += document.getElementById('isbnPesquisa').value">
+        <label for="isbnPesquisa">ISBN:</label><br>
+        <input type="text" id="isbnPesquisa" name="isbn" required><br><br>
+        <button type="submit">Buscar por ISBN</button>
+    </form>
+
+    <hr>
+
+    <h2>Ver todos os livros</h2>
+    <a href="http://localhost:8080/livros" target="_blank">Listar todos</a>
+</body>
+</html>
 
